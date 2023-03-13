@@ -22,3 +22,4 @@ CMD [ "node", "index.js" ]
 #Run
 #docker run -d -p 3000:3000 --env-file ./.env -v /Users/sleepylog/Documents/jsfile/takehome/db:/usr/src/app/db takehome
 #docker run -d -p 5050:5050 -v /Users/sleepylog/Documents/jsfile/rex/data:/usr/src/app/data --env-file ./.env rex
+#docker run -d -p 80:5050 -v ~/rex/data:/usr/src/app/data --env-file ./.env rex
