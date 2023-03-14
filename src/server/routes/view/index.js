@@ -7,7 +7,7 @@ router.get('/',(req,res)=> res.send('view'))
 router.get('/posts', async (req,res) => {
   const {group} = req.query
   if (!group) return res.send(await db.select("*").from("posts"))
-  else return res.send(await db.select("*").from("posts").where({group}))
+  else return res.send(await db.select("*").from("posts").whereILike('group', `%${group}%`)
 })
 router.get('/comments', async (req,res) => {
   const {postid} = req.query
